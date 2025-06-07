@@ -12,10 +12,7 @@ This package provides ROS2 support for HandsFree IMU devices, allowing you to pu
 - Publishes IMU data (`sensor_msgs/Imu`) on `/handsfree/imu`
 - Publishes magnetometer data (`sensor_msgs/MagneticField`) on `/handsfree/mag`
 - Example listener node to print roll, pitch, and yaw
-- ROS2 launch file for easy startup
-- Supports A9, B9, and B6 IMU models
-- Provides acceleration, angular velocity, orientation, and magnetic field data
-
+- ROS2 launch file 
 ---
 
 ## Installation
