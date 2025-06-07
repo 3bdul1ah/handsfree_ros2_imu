@@ -105,36 +105,6 @@ ros2 launch handsfree_ros2_imu handsfree_imu.launch.py port:=/dev/ttyUSB0
 
 ---
 
-## Development
-
-### Building from Source
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/3bdul1ah/handsfree_ros2_imu
-   cd handsfree_ros2_imu
-   ```
-
-2. **Install development dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Build the package:**
-   ```bash
-   colcon build
-   source install/setup.bash
-   ```
-
-### Running Tests
-
-```bash
-colcon test --packages-select handsfree_ros2_imu
-colcon test-result --verbose
-```
-
----
-
 ## Credit
 
 Original work by [HANDS-FREE/handsfree_ros_imu](https://github.com/HANDS-FREE/handsfree_ros_imu). 
