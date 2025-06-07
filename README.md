@@ -2,6 +2,9 @@
 
 **ROS2 port of [HANDS-FREE/handsfree_ros_imu](https://github.com/HANDS-FREE/handsfree_ros_imu)**
 
+[![ROS2](https://img.shields.io/badge/ROS2-Foxy-darkred)](https://docs.ros.org/en/foxy/index.html)
+[![ROS2](https://img.shields.io/badge/ROS2-Humble-blue)](https://docs.ros.org/en/humble/index.html)
+
 This package provides ROS2 support for HandsFree IMU devices, allowing you to publish IMU and magnetometer data to ROS2 topics. It is based on the original ROS1 package and adapted for ROS2 Python nodes and launch files. For more details, visit the [GitHub repository](https://github.com/3bdul1ah/handsfree_ros2_imu) and [official documentation](https://docs.taobotics.com/docs/hfi-imu/).
 
 ## Features
@@ -10,6 +13,9 @@ This package provides ROS2 support for HandsFree IMU devices, allowing you to pu
 - Publishes magnetometer data (`sensor_msgs/MagneticField`) on `/handsfree/mag`
 - Example listener node to print roll, pitch, and yaw
 - ROS2 launch file for easy startup
+- Supports A9, B9, and B6 IMU models
+- Provides acceleration, angular velocity, orientation, and magnetic field data
+
 ---
 
 ## Installation
@@ -95,6 +101,36 @@ Example (override port):
 
 ```bash
 ros2 launch handsfree_ros2_imu handsfree_imu.launch.py port:=/dev/ttyUSB0
+```
+
+---
+
+## Development
+
+### Building from Source
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/3bdul1ah/handsfree_ros2_imu
+   cd handsfree_ros2_imu
+   ```
+
+2. **Install development dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Build the package:**
+   ```bash
+   colcon build
+   source install/setup.bash
+   ```
+
+### Running Tests
+
+```bash
+colcon test --packages-select handsfree_ros2_imu
+colcon test-result --verbose
 ```
 
 ---
